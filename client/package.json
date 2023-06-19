@@ -1,6 +1,7 @@
+
 {
   "name": "client",
-  "proxy":"http://localhost:8080",
+  "proxy":"http://localhost:8080/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,9 +35,7 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      ">0.10%"
     ]
   }
 }

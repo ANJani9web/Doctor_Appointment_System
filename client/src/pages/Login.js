@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form } from 'antd'
+import { Form,Input } from 'antd'
 import {Link} from 'react-router-dom'
 import "../styles/RegisterStyles.css";
 const Login = () => {
@@ -17,11 +17,11 @@ const Login = () => {
                  <h3 className="text-center">Login Form</h3>
                  
                  <Form.Item label="Email" name="email">   
-                      <input type="email" required />
+                      <Input type="email" required />
                  </Form.Item>
 
                  <Form.Item label="Password" name="password">   
-                      <input type="password" required />
+                      <Input type="password" required />
                  </Form.Item>
 
                  <Link to="/register" className="m-2">Not a user login here</Link>

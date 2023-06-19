@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon serevr.js ",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "client": "npm start --prefix ./client"
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "Anjani Kumar",
@@ -19,6 +19,7 @@
     "concurrently": "^8.2.0",
     "dotenv": "^16.2.0",
     "express": "^4.18.2",
+    "grep": "^0.1.0",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.6.0",
     "mongoose": "^7.3.0",
