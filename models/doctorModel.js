@@ -1,52 +1,56 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const doctorSchema = new mongoose.Schema({
-    // personal
-    userId :{
-        type:String,
+const doctorSchema = new mongoose.Schema(
+  {
+    userId: {
+      type: String,
     },
-    firstName:{
-        type:String,
-        required:[true,'Please add a first name']
+    firstName: {
+      type: String,
+      required: [true, "first name is required"],
     },
-    lastName:{
-        type:String,
-        required:[true,'Please add a last name']
+    lastName: {
+      type: String,
+      required: [true, "last name is required"],
     },
-    phone:{
-        type:String,
-        required:[true,'Please add a phone number']
+    phone: {
+      type: String,
+      required: [true, "phone no is required"],
     },
-    email:{
-        type:String,
-        required:[true,'Please add a email']
+    email: {
+      type: String,
+      required: [true, "email is required"],
     },
-    website:{
-        type:String,
+    website: {
+      type: String,
     },
-    address:{
-        type:String,
-        required:[true,'Please add a address']
+    address: {
+      type: String,
+      required: [true, "address is required"],
     },
-    
-    // professional
-    specialization:{
-        type:String,
-        required:[true,'Please add a specialization']
+    specialization: {
+      type: String,
+      required: [true, "specialization is require"],
     },
-    experience:{
-        type:String,
-        required:[true,'Please add a experience']
+    experience: {
+      type: String,
+      required: [true, "experience is required"],
     },
-    feesPerConsulating:{
-        type:Number,
-        required:[true,'Please add a fees per consulating']
+    feesPerCunsaltation: {
+      type: Number,
+      required: [true, "fee is required"],
     },
-    timings:{
-        type:Object,
-        required:[true,'Please add work timing']
-    }
-},{timestamps:true})
+    status: {
+      type: String,
+      default: "pending",
+    },
+    timings: {
+      type: Object,
+      required: [true, "wrok timing is required"],
+    },
+  },
+  { timestamps: true }
+);
 
-const doctorModel = mongoose.model(users,doctorSchema)
-module.exports=doctorModel
+const doctorModel = mongoose.model("doctors", doctorSchema);
+module.exports = doctorModel;

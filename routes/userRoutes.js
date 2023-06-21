@@ -1,18 +1,25 @@
-const express = require('express')
-const {loginController,registerController, authController} = require('../controllers/userCtrl')
-const authMiddleware = require('../middlewares/authMiddleware')
-// router object
-const router = express.Router()
+const express = require("express");
+const {
+  loginController,
+  registerController,
+  authController,
+  applyDoctorController,
+} = require("../controllers/userCtrl");
+const authMiddleware = require("../middlewares/authMiddleware");
 
-// routes 
-// LOGIN || POST
-router.post('/login',loginController)
+//router onject
+const router = express.Router();
 
-// Register || POST
-router.post('/register',registerController)
+//routes
+//LOGIN || POST
+router.post("/login", loginController);
 
-// Auth || POST
-router.post('/getUserData',authMiddleware,authController);
+//REGISTER || POST
+router.post("/register", registerController);
 
-// export router
-module.exports = router
+//Auth || POST
+router.post("/getUserData", authMiddleware, authController);
+
+//APply Doctor || POST
+router.post("/apply-doctor", authMiddleware, applyDoctorController);
+module.exports = router;

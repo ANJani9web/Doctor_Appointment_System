@@ -48,8 +48,10 @@ const Layout = ({ children }) => {
           <div className="content">
             <div className="header">
               <div className="header-content">
-                
+                <Badge count={user && user.notifcation.length}>
                   <i class="fa-solid fa-bell"></i>
+                </Badge>
+
                 <Link to="/profile">{user?.name}</Link>
               </div>
             </div>
