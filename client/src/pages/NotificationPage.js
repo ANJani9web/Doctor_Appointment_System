@@ -22,7 +22,8 @@ const NotificationPage = () => {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
-        })
+        })  
+            window.location.reload()
             dispatch(hideLoading())
             if(res.data.success){
                 message.success(res.data.message)
@@ -49,6 +50,7 @@ const NotificationPage = () => {
           },
         }
       );
+      window.location.reload()
       dispatch(hideLoading());
       if (res.data.success) {
         message.success(res.data.message);
