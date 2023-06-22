@@ -1,5 +1,5 @@
 
-const doctorModel = reqiure('../models/doctorModel')
+const doctorModel = require('../models/doctorModel')
 const userModel = require('../models/userModels')
 
 // get all user controller

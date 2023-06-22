@@ -20,7 +20,7 @@ app.use(morgan("dev")) // log every request to the console
 
 // routes   
 app.use('/api/v1/user',require('./routes/userRoutes'))
-
+app.use('/api/v1/admin',require('./routes/adminRoutes'))
 //Port
 const port = process.env.PORT || 8080
 
