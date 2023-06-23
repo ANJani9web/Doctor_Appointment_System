@@ -1,10 +1,15 @@
-const express = require('express')
-const authMiddleware = require('../middlewares/authMiddleware')
-const { getDoctorInfoController } = require('../controllers/doctorCtrl')
-// router object
-const router = express.Router()
+const express = require("express");
+const {
+  getDoctorInfoController,
+  updateProfileController,
+} = require("../controllers/doctorCtrl");
+const authMiddleware = require("../middlewares/authMiddleware");
+const router = express.Router();
 
-// get single doctor info || POST
-router.post('/getDoctorInfo',authMiddleware,getDoctorInfoController)
+//POST SINGLE DOC INFO
+router.post("/getDoctorInfo", authMiddleware, getDoctorInfoController);
 
-module.exports = router
+//POST UPDATE PROFILE
+router.post("/updateProfile", authMiddleware, updateProfileController);
+
+module.exports = router;
